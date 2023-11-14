@@ -66,6 +66,14 @@ void VulkanRenderer::createInstance()
 	createInfo.enabledLayerCount = 0; 
 	createInfo.ppEnabledLayerNames = nullptr; 
 
+
+
 	// Create instance
-	//vkCreateInstance();
+	VkResult result = vkCreateInstance(&createInfo, nullptr, &instance);
+	
+	if (result != VK_SUCCESS)
+	{
+		throw std::runtime_error("Failed to create vulkan instance"); 
+	}
+	
 }

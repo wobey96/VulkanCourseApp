@@ -16,10 +16,10 @@ public:
 	~VulkanRenderer(); 
 
 private:
-	GLFWwindow* window; 
+	GLFWwindow* window = nullptr; 
 
 	// vulkan components
-	VkInstance instance; 
+	VkInstance instance = nullptr; 
 
 	// vulkan functions 
 	void createInstance();  
